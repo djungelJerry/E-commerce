@@ -1,0 +1,17 @@
+﻿@*@model MVC.E_Commerce.Models.Product*@
+@model List<Product>
+
+<h1>All products</h1>
+
+@foreach (Product Item in Model)
+{
+    
+    <span>Product name: </span>@Html.DisplayFor(modelItem => Item.ProductName)
+    <br />
+    <span>Price: $</span>@Html.DisplayFor(modelItem => Item.ProductPrice)
+    <br />
+    <a asp-action="Details" asp-route-id="@Item.Id">Visa detaljer</a>
+    <br />
+    @*<a asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Item.Id">Lägg i varukorgen</a>*@
+    <div>-----------------------------------------------------------------------</div>
+}

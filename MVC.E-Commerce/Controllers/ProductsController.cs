@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVC.E_Commerce.Models;
 
 namespace MVC.E_Commerce.Controllers
 {
@@ -12,7 +13,16 @@ namespace MVC.E_Commerce.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<Product> AllProducts = Context.Products.ToList();
+            return View(AllProducts);
+        }
+        public IActionResult Details(int id)
+        {
+            Product CurrentProduct = new Product();
+            CurrentProduct = Context.Products.Where(x => x.Id == id).FirstOrDefault();
+            return View(CurrentProduct);
+
         }
     }
 }
+
