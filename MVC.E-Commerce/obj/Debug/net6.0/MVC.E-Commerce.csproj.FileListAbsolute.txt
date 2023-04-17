@@ -1,5 +1,4 @@
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\appsettings.json
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\MVC.E-Commerce.staticwebassets.runtime.json
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\MVC.E-Commerce.exe
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\MVC.E-Commerce.deps.json
@@ -85,3 +84,4 @@ C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\obj\Debug\net6.0\refin
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\obj\Debug\net6.0\MVC.E-Commerce.pdb
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\obj\Debug\net6.0\MVC.E-Commerce.genruntimeconfig.cache
 C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\obj\Debug\net6.0\ref\MVC.E-Commerce.dll
+C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\bin\Debug\net6.0\appsettings.json

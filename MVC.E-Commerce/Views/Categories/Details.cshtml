@@ -1,0 +1,13 @@
+﻿@model MVC.E_Commerce.Models.Category
+
+<h1>@Html.DisplayFor(model => model.CategoryName)</h1>
+
+@foreach (Product Item in Model.Products)
+{
+    <span>Product name: </span>@Html.DisplayFor(modelItem => Item.ProductName)
+    <br />
+}
+
+@*@Html.DisplayFor(model => model.ProductDescription)
+<br />
+<span>Price: $</span> @Html.DisplayFor(model => model.ProductPrice)*@
