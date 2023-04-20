@@ -362,6 +362,3 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-# Ignore file containing Connection string
-/MVC.E-Commerce/appsettings.json
-/MVC.E-Commerce/bin/Debug/net6.0/appsettings.json
