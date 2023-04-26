@@ -40,37 +40,37 @@ namespace MVC.E_Commerce
             //Products Table
             // -- Laptops --
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 1, ProductName = "Apple MacBook Air", ProductDescription = "13.3\", 1440x900, Intel Core i5 1.8GHz, 8GB, 128GB Flash Storage, Intel HD Graphics 6000", ProductPrice = 11890.00M });
+                new Product { Id = 1, ProductName = "Apple MacBook Air", ProductDescription = "13.3\", 1440x900, Intel Core i5 1.8GHz, 8GB, 128GB Flash Storage, Intel HD Graphics 6000", ProductPrice = 1890.00M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 2, ProductName = "Apple MacBook Pro", ProductDescription = "13.3\", IPS Panel Retina Display 2560x1600, Intel Core i5 2.3GHz,8GB, 128GB SSD, Intel Iris Plus Graphics 640", ProductPrice = 16599.99M });
+                new Product { Id = 2, ProductName = "Apple MacBook Pro", ProductDescription = "13.3\", IPS Panel Retina Display 2560x1600, Intel Core i5 2.3GHz,8GB, 128GB SSD, Intel Iris Plus Graphics 640", ProductPrice = 1999.99M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 3, ProductName = "Acer Aspire 3", ProductDescription = "15.6\", 1366x768, AMD A9-Series 9420 3GHz, 4GB, 500GB HDD, AMD Radeon R5", ProductPrice = 4599.90M });
+                new Product { Id = 3, ProductName = "Acer Aspire 3", ProductDescription = "15.6\", 1366x768, AMD A9-Series 9420 3GHz, 4GB, 500GB HDD, AMD Radeon R5", ProductPrice = 599.90M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 4, ProductName = "ZenBook UX430UN", ProductDescription = "14.0\", Full HD 1920x1080, Intel Core i7 8550U 1.8GHz, 16GB, 512GB SSD, Nvidia GeForce MX150", ProductPrice = 15999.99M });
+                new Product { Id = 4, ProductName = "ZenBook UX430UN", ProductDescription = "14.0\", Full HD 1920x1080, Intel Core i7 8550U 1.8GHz, 16GB, 512GB SSD, Nvidia GeForce MX150", ProductPrice = 1599.99M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 5, ProductName = "Acer Swift 3", ProductDescription = "14.0\", IPS Panel Full HD 1920x1080, Intel Core i5 8250U 1.6GHz, 8GB, 256GB SSD, Intel UHD Graphics 620", ProductPrice = 3998.49M });
+                new Product { Id = 5, ProductName = "Acer Swift 3", ProductDescription = "14.0\", IPS Panel Full HD 1920x1080, Intel Core i5 8250U 1.6GHz, 8GB, 256GB SSD, Intel UHD Graphics 620", ProductPrice = 398.49M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 6, ProductName = "Dell XPS 13", ProductDescription = "13.3\", IPS Panel Full HD / Touchscreen 1920x1080, Intel Core i5 8250U 1.6GHz, 8GB, 128GB SSD, Intel UHD Graphics 620", ProductPrice = 9999.98M });
+                new Product { Id = 6, ProductName = "Dell XPS 13", ProductDescription = "13.3\", IPS Panel Full HD / Touchscreen 1920x1080, Intel Core i5 8250U 1.6GHz, 8GB, 128GB SSD, Intel UHD Graphics 620", ProductPrice = 2199.98M });
             // -- Monitors --
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 11, ProductName = "Acer CP1241Y V", ProductDescription = "24\", 1920x1080, IPS, 165Hz, FreeSync Premium", ProductPrice = 1949.49M });
+                new Product { Id = 11, ProductName = "Acer CP1241Y V", ProductDescription = "24\", 1920x1080, IPS, 165Hz, FreeSync Premium", ProductPrice = 149.49M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 12, ProductName = "AOC C27G1", ProductDescription = "27\", 1920x1080, VA, 144Hz, FreeSync Premium", ProductPrice = 2199.99M });
+                new Product { Id = 12, ProductName = "AOC C27G1", ProductDescription = "27\", 1920x1080, VA, 144Hz, FreeSync Premium", ProductPrice = 299.99M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 13, ProductName = "Cooler Master GM32-FQ", ProductDescription = "32\", 2560x1440, IPS, 165Hz, FreeSync Premium", ProductPrice = 3669.00M });
+                new Product { Id = 13, ProductName = "Cooler Master GM32-FQ", ProductDescription = "32\", 2560x1440, IPS, 165Hz, FreeSync Premium", ProductPrice = 369.00M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 14, ProductName = "MSI G27CQ4", ProductDescription = "27\", 2560x1440, VA, 165Hz, FreeSync Premium", ProductPrice = 4669.00M });
+                new Product { Id = 14, ProductName = "MSI G27CQ4", ProductDescription = "27\", 2560x1440, VA, 165Hz, FreeSync Premium", ProductPrice = 469.00M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 15, ProductName = "Samsung Odyssey G70B32", ProductDescription = "32\", 3840x2160, IPS, 144Hz, FreeSync Premium", ProductPrice = 3669.00M });
+                new Product { Id = 15, ProductName = "Samsung Odyssey G70B32", ProductDescription = "32\", 3840x2160, IPS, 144Hz, FreeSync Premium", ProductPrice = 369.00M });
             // -- Desktops --
             modelBuilder.Entity<Product>().HasData(
                 new Product { Id = 21, ProductName = "Dell XPS Desktop", ProductDescription = "12th-generation Intel Core i5 – i9, NVIDIA GeForce RTX 3090, 128GB DDR5-3600. 2TB M.2 PCIe NVME SSD + 2TB SATA 7200RPM HDD", ProductPrice = 1669.49M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 22, ProductName = "Apple Mac Mini M2", ProductDescription = "Apple M2 Pro, Integrated 16-core GPU, 32GB unified memory, 8TB SSD", ProductPrice = 21299.99M });
+                new Product { Id = 22, ProductName = "Apple Mac Mini M2", ProductDescription = "Apple M2 Pro, Integrated 16-core GPU, 32GB unified memory, 8TB SSD", ProductPrice = 2129.99M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 23, ProductName = "MSI MEG Aegis Ti5", ProductDescription = "Intel Core i9-12900K, NVIDIA GeForce RTX 3090, 128GB 4400MHz DDR5, 2TB SSD + 3TB HDD", ProductPrice = 36699.99M });
+                new Product { Id = 23, ProductName = "MSI MEG Aegis Ti5", ProductDescription = "Intel Core i9-12900K, NVIDIA GeForce RTX 3090, 128GB 4400MHz DDR5, 2TB SSD + 3TB HDD", ProductPrice = 3699.99M });
             modelBuilder.Entity<Product>().HasData(
-                new Product { Id = 24, ProductName = "Corsair One i300", ProductDescription = "12th Gen Intel Core i9-12900K, Nvidia RTX 3080 Ti, 64GB DDR4 2666MHz, 1 x M.2 SSD + 1 x 2.5\" SSD", ProductPrice = 31599.00M });
+                new Product { Id = 24, ProductName = "Corsair One i300", ProductDescription = "12th Gen Intel Core i9-12900K, Nvidia RTX 3080 Ti, 64GB DDR4 2666MHz, 1 x M.2 SSD + 1 x 2.5\" SSD", ProductPrice = 3159.00M });
             // -- Printers --
             modelBuilder.Entity<Product>().HasData(
                 new Product { Id = 31, ProductName = "HP OfficeJet Pro 8025", ProductDescription = "High-resolution, 20 ppm, Ethernet/WiFi", ProductPrice = 189.00M });
@@ -297,6 +297,10 @@ namespace MVC.E_Commerce
                 new { ProductsId = 81, TagsId = 3 });
             modelBuilder.Entity("ProductTag").HasData(
                 new { ProductsId = 81, TagsId = 5 });
+
+            //Carts Table
+            modelBuilder.Entity<Cart>().HasData(
+                new { Id = 1, CartTotal = 00.00M });
         }
     }
 }
