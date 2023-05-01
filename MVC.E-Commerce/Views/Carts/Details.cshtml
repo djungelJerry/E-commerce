@@ -1,13 +1,13 @@
 ﻿@model MVC.E_Commerce.Models.Cart
 
-<h1>Your cart</h1>
+<h1>Your shopping cart</h1>
 
 CartId: @Html.DisplayFor(model => model.Id)
 <br />
-Summa: @Html.DisplayFor(model => model.CartTotal)
+Summa: @Html.DisplayFor(model => model.CartTotal) <br />
+<a asp-controller="Carts" asp-action="EmptyCart" asp-route-id="">Empty cart</a>
 
-
-<h2>Produkter</h2>
+<h2>Products</h2>
 
 @foreach (CartItem Item in Model.CartItems)
 {
@@ -19,5 +19,7 @@ Summa: @Html.DisplayFor(model => model.CartTotal)
 
     <span>Antal: </span>@Html.DisplayFor(modelItem => Item.Quantity)
     <br />
+    <a asp-controller="Carts" asp-action="RemoveItem" asp-route-id="@Item.Id">Remove Item</a>
+
     <div>-------------------------------</div>
 }

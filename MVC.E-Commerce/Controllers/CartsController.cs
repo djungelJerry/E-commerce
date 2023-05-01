@@ -48,6 +48,46 @@ namespace MVC.E_Commerce.Controllers
             return RedirectToAction(nameof(Details));
 
         }
+        public IActionResult RemoveItem (int id)
+        {
+
+            Product CurrentProduct = Context.Products.FirstOrDefault(x => x.Id == id);
+
+            CartItem cartItem = Context.CartItems
+                .FirstOrDefault(x => x.CartId == 1 && x.Id == id);
+
+           
+            if (cartItem != null)
+            {
+                if (cartItem.Quantity > 1)
+                {
+                    cartItem.Quantity--;         
+                    //CartItem CartItem = new CartItem();
+                    //CartItem.ProductId = CurrentProduct.Id;
+                    //CartItem.CartItemTotal = CurrentProduct.ProductPrice;
+                    //Cart Cart = Context.Carts.FirstOrDefault(x => x.Id == 1);
+                    //Cart.CartTotal = Cart.CartTotal - CartItem.CartItemTotal;
+                    //Cart.CartItems = new List<CartItem>();
+                    //Context.Carts.Update(Cart);
+                    //Context.CartItems.Update(cartItem);
+
+                    Context.SaveChanges();
+
+                }
+                else
+                {
+                    Context.CartItems.Remove(cartItem);
+                }
+                Context.SaveChanges();
+            }
+                return RedirectToAction(nameof(Details));
+
+        }
+        public IActionResult EmptyCart (int id)
+        {
+
+            return View();
+        }
 
         public IActionResult Details()
         {
