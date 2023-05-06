@@ -1,23 +1,41 @@
 ﻿@model MVC.E_Commerce.Models.Cart
 
-<h1>Your cart</h1>
-
-CartId: @Html.DisplayFor(model => model.Id)
-<br />
-Summa: @Html.DisplayFor(model => model.CartTotal)
-
-
-<h2>Produkter</h2>
-
-@foreach (CartItem Item in Model.CartItems)
-{
-
-    <span>Service Id: </span> @Html.DisplayFor(modelItem => Item.ProductId)
+<h4>Your shopping cart</h4>
+<div>
+    CartId: @Html.DisplayFor(model => model.Id)
     <br />
-    <span>Summa: </span>@Html.DisplayFor(modelItem => Item.CartItemTotal)
+    Order summary: @Html.DisplayFor(model => model.CartTotal)
     <br />
+    <a asp-controller="Carts" asp-action="EmptyCart" asp-route-id="" class="empty-cart">Empty cart</a>
+</div>
 
-    <span>Antal: </span>@Html.DisplayFor(modelItem => Item.Quantity)
+<div>
     <br />
-    <div>-------------------------------</div>
-}
+    <br />
+    <h3>Products</h3>
+
+    @foreach (CartItem Item in Model.CartItems)
+    {
+
+        <span>Product Id: </span> @Html.DisplayFor(modelItem => Item.ProductId)
+        <br />
+        <span>Items Total: </span>@Html.DisplayFor(modelItem => Item.CartItemTotal)
+        <br />
+        <td>
+            <div class="button-container">
+                <button class="cart-qty-plus" type="button" value="+">
+                    <a asp-controller="Carts" asp-action="AddOneItem" asp-route-id="@Item.ProductId"><span> + </span> </a>
+                </button>
+                @Html.DisplayFor(modelItem => Item.Quantity)
+                <button class="cart-qty-minus" type="button" value="-"><a asp-controller="Carts" asp-action="RemoveOneItem" asp-route-id="@Item.ProductId" form action> - </a></button>
+                <br />
+            </div>
+        </td>
+
+
+        <a asp-controller="Carts" asp-action="RemoveAllOfTheseItems" asp-route-id="@Item.ProductId">Remove Item</a>
+
+        <div>-------------------------------</div>
+    }
+</div>
+
