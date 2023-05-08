@@ -6,9 +6,8 @@
 
 <span>Product description: </span> @Html.DisplayFor(model => model.ProductDescription)
 <br />
-<span>Price: $</span> @Html.DisplayFor(model => model.ProductPrice)
+<span>Price: SEK</span> @Html.DisplayFor(model => model.ProductPrice)
+
 
 <br />
-<a asp-action="DetailsSek" asp-route-id="@Model.Id">Visa i SEK</a>
-
-
+<a asp-action="Details" asp-route-id="@Model.Id">Visa i USD</a>

@@ -1,0 +1,27 @@
+﻿@model MVC.E_Commerce.Models.Cart
+
+<h1>Your cart</h1>
+
+CartId: @Html.DisplayFor(model => model.Id)
+<br />
+Summa SEK: @Html.DisplayFor(model => model.CartTotal)
+
+
+<h2>Produkter</h2>
+
+@foreach (CartItem Item in Model.CartItems)
+{
+
+        <span>Service Id: </span> @Html.DisplayFor(modelItem => Item.ProductId)
+        <br />
+        <span>Summa SEK: </span>
+
+    @Html.DisplayFor(modelItem => Item.CartItemTotal)
+        <br />
+
+        <span>Antal: </span>
+
+    @Html.DisplayFor(modelItem => Item.Quantity)
+        <br />
+        <div>-------------------------------</div>
+}

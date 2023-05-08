@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Tags\" />
-    <Folder Include="Views\Carts\" />
   </ItemGroup>
 
   <ItemGroup>
