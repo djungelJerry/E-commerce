@@ -7,6 +7,7 @@ namespace MVC.E_Commerce.Controllers
     {
         private readonly ApplicationContext Context;
 
+
         public ProductsController(ApplicationContext _context)
         {
             Context = _context;
@@ -23,6 +24,28 @@ namespace MVC.E_Commerce.Controllers
             return View(CurrentProduct);
 
         }
+
+       
+
+        public IActionResult IndexSek(int id)
+        {
+            List<Product> AllProducts = Context.Products.ToList();
+            foreach (Product product in AllProducts)
+            {
+                product.ProductPrice /= 10;
+            }
+            return View(AllProducts);
+        }
+
+
+        public IActionResult DetailsSek(int id)
+        {
+            Product CurrentProduct = Context.Products.Where(x => x.Id == id).FirstOrDefault();
+            CurrentProduct.ProductPrice /= 10;
+            return View(CurrentProduct);
+        }
+
+
     }
 }
 

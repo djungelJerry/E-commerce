@@ -55,5 +55,24 @@ namespace MVC.E_Commerce.Controllers
                 .Include(x => x.CartItems).FirstOrDefault(x => x.Id == 1);
             return View(Cart);
         }
+
+
+        public IActionResult DetailsSek()
+        {
+            Cart Cart = Context.Carts
+                .Include(x => x.CartItems).FirstOrDefault(x => x.Id == 1);
+
+            foreach (CartItem cartItem in Cart.CartItems)
+            {
+                cartItem.CartItemTotal /= 10;
+            }
+            Cart.CartTotal /= 10;
+
+
+            return View(Cart);
+        }
+
+
+
     }
 }

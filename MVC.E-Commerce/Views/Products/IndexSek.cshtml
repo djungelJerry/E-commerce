@@ -1,0 +1,26 @@
+﻿@*@model MVC.E_Commerce.Models.Product*@
+
+@Html.Partial("/Views/Shared/Cart.cshtml")
+
+@model List<Product>
+
+<h1>All products</h1>
+
+@foreach (Product Item in Model)
+{
+
+        <span>Product name: </span>
+
+    @Html.DisplayFor(modelItem => Item.ProductName)
+        <br />
+        <span>Price: SEK</span>
+
+    @Html.DisplayFor(modelItem => Item.ProductPrice)
+        <br />
+        <a asp-action="DetailsSek" asp-route-id="@Item.Id">Visa detaljer</a>
+        <br />
+        <a asp-controller="Carts" asp-action="DetailsSek" asp-route-id="@Item.Id">Lägg i varukorgen</a>
+    <br />
+    <a asp-action="Index" asp-route-id="@Item.Id">Visa i USD</a>
+        <div>-----------------------------------------------------------------------</div>
+}
