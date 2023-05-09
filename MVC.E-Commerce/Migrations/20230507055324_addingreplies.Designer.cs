@@ -4,6 +4,7 @@ using MVC.E_Commerce;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC.E_Commerce.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230507055324_addingreplies")]
+    partial class addingreplies
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -617,24 +620,13 @@ namespace MVC.E_Commerce.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<bool>("IsCustomer")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("StoreReply")
+                    b.Property<string>("StoreName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("SupportId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TicketId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("SupportId");
-
-                    b.ToTable("StoreSupports");
+                    b.ToTable("StoreSupport");
                 });
 
             modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
@@ -948,6 +940,21 @@ namespace MVC.E_Commerce.Migrations
                         });
                 });
 
+            modelBuilder.Entity("StoreSupportSupport", b =>
+                {
+                    b.Property<int>("StoreSupportsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SupportsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("StoreSupportsId", "SupportsId");
+
+                    b.HasIndex("SupportsId");
+
+                    b.ToTable("StoreSupportSupport");
+                });
+
             modelBuilder.Entity("CategoryProduct", b =>
                 {
                     b.HasOne("MVC.E_Commerce.Models.Category", null)
@@ -982,17 +989,6 @@ namespace MVC.E_Commerce.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("MVC.E_Commerce.Models.StoreSupport", b =>
-                {
-                    b.HasOne("MVC.E_Commerce.Models.Support", "Support")
-                        .WithMany("StoreSupports")
-                        .HasForeignKey("SupportId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Support");
-                });
-
             modelBuilder.Entity("ProductTag", b =>
                 {
                     b.HasOne("MVC.E_Commerce.Models.Product", null)
@@ -1008,14 +1004,24 @@ namespace MVC.E_Commerce.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("StoreSupportSupport", b =>
+                {
+                    b.HasOne("MVC.E_Commerce.Models.StoreSupport", null)
+                        .WithMany()
+                        .HasForeignKey("StoreSupportsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MVC.E_Commerce.Models.Support", null)
+                        .WithMany()
+                        .HasForeignKey("SupportsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("MVC.E_Commerce.Models.Cart", b =>
                 {
                     b.Navigation("CartItems");
-                });
-
-            modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
-                {
-                    b.Navigation("StoreSupports");
                 });
 #pragma warning restore 612, 618
         }

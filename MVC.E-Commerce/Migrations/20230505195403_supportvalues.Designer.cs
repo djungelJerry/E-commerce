@@ -4,6 +4,7 @@ using MVC.E_Commerce;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MVC.E_Commerce.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230505195403_supportvalues")]
+    partial class supportvalues
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -609,34 +612,6 @@ namespace MVC.E_Commerce.Migrations
                         });
                 });
 
-            modelBuilder.Entity("MVC.E_Commerce.Models.StoreSupport", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<bool>("IsCustomer")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("StoreReply")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SupportId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TicketId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SupportId");
-
-                    b.ToTable("StoreSupports");
-                });
-
             modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
                 {
                     b.Property<int>("Id")
@@ -650,6 +625,10 @@ namespace MVC.E_Commerce.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Reply")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -982,17 +961,6 @@ namespace MVC.E_Commerce.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("MVC.E_Commerce.Models.StoreSupport", b =>
-                {
-                    b.HasOne("MVC.E_Commerce.Models.Support", "Support")
-                        .WithMany("StoreSupports")
-                        .HasForeignKey("SupportId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Support");
-                });
-
             modelBuilder.Entity("ProductTag", b =>
                 {
                     b.HasOne("MVC.E_Commerce.Models.Product", null)
@@ -1011,11 +979,6 @@ namespace MVC.E_Commerce.Migrations
             modelBuilder.Entity("MVC.E_Commerce.Models.Cart", b =>
                 {
                     b.Navigation("CartItems");
-                });
-
-            modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
-                {
-                    b.Navigation("StoreSupports");
                 });
 #pragma warning restore 612, 618
         }

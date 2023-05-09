@@ -1,0 +1,27 @@
+﻿
+@model MVC.E_Commerce.Models.Support
+
+
+
+<h1>
+	Ticket @Html.DisplayFor(model => model.Id)
+</h1>
+
+<div>
+	Information about ticket: @Html.DisplayFor(model => model.Id)
+</div>
+
+Id:			  @Html.DisplayFor(model => model.Id)
+<br />
+Title:		  @Html.DisplayFor(model => model.Title)
+<br />
+Description:  @Html.DisplayFor(model => model.Description)
+<br />
+Created by:    @Html.DisplayFor(model => model.Creator)
+<br />
+<a asp-action="AnswerTicket" >Answer Ticket</a>
+<br />
+
+<br />
+
+

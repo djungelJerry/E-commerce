@@ -1,0 +1,27 @@
+﻿@model MVC.E_Commerce.Models.Support
+
+
+<h1>
+	Ticket @Html.DisplayFor(model => model.Id)
+</h1>
+
+<div>
+	Information about ticket:  @Html.DisplayFor(model => model.Id)
+</div>
+
+Id:			  @Html.DisplayFor(model => model.Id)
+<br />
+Title:		  @Html.DisplayFor(model => model.Title)
+<br />
+Description:  @Html.DisplayFor(model => model.Description)
+<br />
+Created by:    @Html.DisplayFor(model => model.Creator)
+<br />
+Are you sure you want to delete this ticket?
+<br />
+<br />
+<a asp-action="DeleteConfirm" asp-route-Id="@Model.Id">Delete </a>
+<br />
+<br />
+<a asp-action="Index">Cancel</a>
+<br />

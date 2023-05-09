@@ -1,0 +1,37 @@
+﻿
+@model List<Support>
+
+<h1>Todays Tickets</h1>
+
+<br />
+<br />
+
+@foreach (Support item in Model)
+{
+
+	<span>Id: </span>
+	@Html.DisplayFor(modelItem => item.Id)
+	<br />
+	<span>Title: </span>
+	@Html.DisplayFor(modelItem => item.Title)
+	<br />
+	<span>Description: </span>
+	@Html.DisplayFor(modelItem => item.Description)
+	<br />
+	<span>Created by: </span>
+	@Html.DisplayFor(modelItem => item.Creator)
+	<br />
+	<a asp-action="EditTicket" >Edit Ticket</a>
+	<br />
+	<a asp-action="DeleteTicket" asp-route-Id="@item.Id">Delete</a>
+	<br />
+	<br />
+
+	<br />
+
+	<a asp-controller="StoreSupport" asp-action="ReplyTicket" asp-route-id="@item.Id"> Reply to customer</a>
+	<br />
+
+	<div>----------------------------</div>
+
+}

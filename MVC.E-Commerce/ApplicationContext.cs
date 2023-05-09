@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Net.Sockets;
+using Microsoft.EntityFrameworkCore;
 using MVC.E_Commerce.Models;
+
 
 namespace MVC.E_Commerce
 {
@@ -14,8 +16,12 @@ namespace MVC.E_Commerce
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
-    
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+		public DbSet<Support> Supports { get; set; }
+        public DbSet<StoreSupport> StoreSupports { get; set; }
+        
+
+
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Categories Table
             modelBuilder.Entity<Category>().HasData(

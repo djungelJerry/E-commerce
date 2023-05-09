@@ -1,0 +1,44 @@
+﻿
+@model MVC.E_Commerce.Models.viewmodelStoresupportSupport
+@{
+    ViewBag.Title = "Home Page";
+}
+<h2>@ViewBag.Message</h2>
+
+<p><b>Support List</b></p>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Code</th>
+        <th>Name</th>
+    </tr>
+    @foreach (Support support in Model.Supports)
+    {
+        <tr>
+            <td>@support.Id</td>
+            <td>@support.Title</td>
+            <td>@support.Description</td>
+            <td>@support.Creator</td>
+        </tr>
+    }
+</table>
+
+<p><b>StoreSupport List</b></p>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Reply</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (StoreSupport storeSupport in Model.StoreSupports)
+    {
+        <tr>
+            <td>@storeSupport.TicketId</td>
+            <td>@storeSupport.StoreReply</td>
+          
+        </tr>
+    }
+</table>

@@ -1,0 +1,17 @@
+﻿@model MVC.E_Commerce.Models.StoreSupport
+
+<h1>Answer Ticket</h1>
+
+<br />
+Reply to customer:
+<br />
+<form asp-action="AnswerTicket" method="POST">
+	TicketId: <input type="text" name="TicketId" /><br />
+	StoreReply <input type="text" name="StoreReply" /> <br />
+	
+	<input type="submit" value="Answer Customer" /><br />
+
+</form>
+<br />
+<br />
+<br />
