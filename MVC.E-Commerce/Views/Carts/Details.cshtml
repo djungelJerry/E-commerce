@@ -7,7 +7,7 @@
 <br />
 @if (Model.CartItems.Count() != 0)
 {
-    <a asp-controller="Checkouts" asp-action="Index" class="btn btn-sm btn-success">Order checkout</a>
+    <a asp-controller="Checkouts" asp-action="Details" class="btn btn-sm btn-success Order">Order checkout</a>
     <br />
     <a asp-controller="Carts" asp-action="EmptyCart">
         <button type="button" class="btn btn-sm btn-danger mt-1">
@@ -48,3 +48,4 @@
     </a>
     <hr />
 }
+

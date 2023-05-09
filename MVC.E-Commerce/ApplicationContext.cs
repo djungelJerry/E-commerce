@@ -15,8 +15,9 @@ namespace MVC.E_Commerce
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Support> Supports { get; set; }
-        public DbSet<StoreSupports> StoreSupport { get; set; }
-    
+        public DbSet<StoreSupport> StoreSupports { get; set; }
+        public DbSet<Checkout> Checkouts { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Categories Table
@@ -133,7 +134,7 @@ namespace MVC.E_Commerce
                 new Tag { Id = 4, TagName = "Productivity" });
             modelBuilder.Entity<Tag>().HasData(
                 new Tag { Id = 5, TagName = "Retro" });
-            
+
             //CategoryProduct Table
             modelBuilder.Entity("CategoryProduct").HasData(
                 new { CategoriesId = 1, ProductsId = 1 });
@@ -303,7 +304,11 @@ namespace MVC.E_Commerce
             //Carts Table
             modelBuilder.Entity<Cart>().HasData(
                 new { Id = 1, CartTotal = 00.00M });
+
+
+            //Checkouts Table
+            //modelBuilder.Entity<Checkout>().HasData(
+            //  new { Id = 1, CheckoutTotal = 00.00M });
         }
     }
 }
-
