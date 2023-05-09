@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MVC.E_Commerce.Models;
 
 namespace MVC.E_Commerce.Controllers
 {
@@ -12,7 +14,13 @@ namespace MVC.E_Commerce.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<Tag> AllTags = Context.Tags.Include(p => p.Products).ToList();
+            return View(AllTags);
+        }
+        public IActionResult Details(int id)
+        {
+            Tag CurrentTag = Context.Tags.Include(p => p.Products).Where(x => x.Id == id).FirstOrDefault();
+            return View(CurrentTag);
         }
     }
 }

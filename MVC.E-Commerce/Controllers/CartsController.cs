@@ -140,7 +140,7 @@ namespace MVC.E_Commerce.Controllers
         public IActionResult Details()
         {
             Cart Cart = Context.Carts
-                .Include(x => x.CartItems).FirstOrDefault(x => x.Id == 1);
+                .Include(ci => ci.CartItems).ThenInclude(p => p.Product).FirstOrDefault(x => x.Id == 1);
             return View(Cart);
         }
 
@@ -148,7 +148,7 @@ namespace MVC.E_Commerce.Controllers
         public IActionResult DetailsSek()
         {
             Cart Cart = Context.Carts
-                .Include(x => x.CartItems).FirstOrDefault(x => x.Id == 1);
+                .Include(ci => ci.CartItems).ThenInclude(p => p.Product).FirstOrDefault(x => x.Id == 1);
 
             foreach (CartItem cartItem in Cart.CartItems)
             {

@@ -1,25 +1,22 @@
-﻿@*@model MVC.E_Commerce.Models.Product*@
-
-@Html.Partial("/Views/Shared/Cart.cshtml")
-
-@model List<Product>
+﻿@model List<Product>
 
 <h1>All products</h1>
 
 @foreach (Product Item in Model)
 {
-
-    <span>Product name: </span>@Html.DisplayFor(modelItem => Item.ProductName)
+    @Html.DisplayFor(modelItem => Item.ProductName)
     <br />
-    <span>Price: $</span>@Html.DisplayFor(modelItem => Item.ProductPrice)
+    foreach (Tag Name in Item.Tags)
+    {
+        <a class="text-warning" asp-controller="Tags" asp-action="Details" asp-route-id="@Name.Id"><span>#</span>@Html.DisplayFor(Item => Name.TagName)</a>
+    }
     <br />
-    <a asp-action="Details" asp-route-id="@Item.Id">Visa detaljer</a>
+    <span>Price: $</span> @Html.DisplayFor(modelItem => Item.ProductPrice)
     <br />
-    <a asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Item.Id">Lägg i varukorgen</a>
+    <a class="btn btn-sm btn-info mt-1" asp-action="Details" asp-route-id="@Item.Id">Details</a>
     <br />
-    <a asp-action="IndexSek" asp-route-id="@Item.Id">Visa i SEK</a>
+    <a class="btn btn-sm btn-success mt-1" asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Item.Id">Add to cart</a>
     <br />
-  
-
-    <div>-----------------------------------------------------------------------</div>
+    <a class="btn btn-sm btn-warning mt-1" asp-action="IndexSek" asp-route-id="@Item.Id">Change prices to SEK</a>
+    <hr />
 }

@@ -1,13 +1,19 @@
 ﻿@model MVC.E_Commerce.Models.Product
-@Html.Partial("/Views/Shared/Cart.cshtml")
-
+<div class="position-relative">
+    <div class="position-absolute top-0 end-0">
+        @{
+            Html.RenderPartial("/Views/Shared/_Cart.cshtml");
+        }
+    </div>
+</div>
 
 <h1>@Html.DisplayFor(model => model.ProductName)</h1>
 
-<span>Product description: </span> @Html.DisplayFor(model => model.ProductDescription)
+<span>Product details: </span> @Html.DisplayFor(model => model.ProductDescription)
 <br />
 <span>Price: SEK</span> @Html.DisplayFor(model => model.ProductPrice)
-
-
 <br />
-<a asp-action="Details" asp-route-id="@Model.Id">Visa i USD</a>
+<a class="btn btn-sm btn-warning mt-1" asp-action="Details" asp-route-id="@Model.Id">See price in USD</a>
+<br />
+<a class="btn btn-sm btn-success mt-1" asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Model.Id">Add to cart</a>
+<hr />
