@@ -1,0 +1,12 @@
+﻿@model List<Tag>
+
+<h1>All tags</h1>
+
+@foreach (Tag Item in Model)
+{
+    @Html.DisplayFor(modelItem => Item.TagName)
+    <br />
+    <a class="btn btn-sm btn-info mt-1" asp-action="Details" asp-route-id="@Item.Id">Details</a>
+    <br />
+    <hr />
+}

@@ -29,10 +29,10 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Categories" asp-action="Index">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Tags" asp-action="Index">Tags</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Carts" asp-action="Details">Shopping cart</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
                 </div>
@@ -40,6 +40,13 @@
         </nav>
     </header>
     <div class="container">
+        <div class="position-relative">
+            <div class="position-absolute top-0 end-0">
+                @{
+                    Html.RenderPartial("/Views/Shared/_Cart.cshtml");
+                }
+            </div>
+        </div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

@@ -11,9 +11,9 @@
 
 <span>Product details: </span> @Html.DisplayFor(model => model.ProductDescription)
 <br />
-<span>Price: $</span> @Html.DisplayFor(model => model.ProductPrice)
+<span>Price: SEK</span> @Html.DisplayFor(model => model.ProductPrice)
 <br />
-<a class="btn btn-sm btn-warning mt-1" asp-action="DetailsSek" asp-route-id="@Model.Id">See price in SEK</a>
+<a class="btn btn-sm btn-warning mt-1" asp-action="Details" asp-route-id="@Model.Id">See price in USD</a>
 <br />
 <a class="btn btn-sm btn-success mt-1" asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Model.Id">Add to cart</a>
 <br />
@@ -28,4 +28,3 @@
     </svg>
 </button>
 <hr />
-

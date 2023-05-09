@@ -11,12 +11,12 @@
         <a class="text-warning" asp-controller="Tags" asp-action="Details" asp-route-id="@Name.Id"><span>#</span>@Html.DisplayFor(Item => Name.TagName)</a>
     }
     <br />
-    <span>Price: $</span> @Html.DisplayFor(modelItem => Item.ProductPrice)
+    <span>Price: SEK </span>@Html.DisplayFor(modelItem => Item.ProductPrice)
     <br />
-    <a class="btn btn-sm btn-info mt-1" asp-action="Details" asp-route-id="@Item.Id">Details</a>
+    <a class="btn btn-sm btn-info mt-1" asp-action="DetailsSek" asp-route-id="@Item.Id">Details</a>
     <br />
     <a class="btn btn-sm btn-success mt-1" asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Item.Id">Add to cart</a>
     <br />
-    <a class="btn btn-sm btn-warning mt-1" asp-action="IndexSek" asp-route-id="@Item.Id">Change prices to SEK</a>
+    <a class="btn btn-sm btn-warning mt-1" asp-action="Index" asp-route-id="@Item.Id">Change prices to USD</a>
     <hr />
 }
