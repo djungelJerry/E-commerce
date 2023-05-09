@@ -7,7 +7,7 @@
 namespace MVC.E_Commerce.Migrations
 {
     /// <inheritdoc />
-    public partial class CreateTablesAndSeedingData : Migration
+    public partial class CreatingTablesAndSeedData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -39,6 +39,29 @@ namespace MVC.E_Commerce.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Checkouts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Fullname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<int>(type: "int", nullable: false),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ZipCode = table.Column<int>(type: "int", nullable: false),
+                    CardHoldersName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CardNumber = table.Column<int>(type: "int", maxLength: 16, nullable: false),
+                    CardExpiryDate = table.Column<string>(type: "nvarchar(5)", maxLength: 5, nullable: false),
+                    CVC = table.Column<int>(type: "int", maxLength: 3, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Checkouts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -51,6 +74,21 @@ namespace MVC.E_Commerce.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Supports",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Creator = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Supports", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -114,6 +152,28 @@ namespace MVC.E_Commerce.Migrations
                         name: "FK_CategoryProduct_Products_ProductsId",
                         column: x => x.ProductsId,
                         principalTable: "Products",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "StoreSupports",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TicketId = table.Column<int>(type: "int", nullable: false),
+                    StoreReply = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsCustomer = table.Column<bool>(type: "bit", nullable: false),
+                    SupportId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_StoreSupports", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_StoreSupports_Supports_SupportId",
+                        column: x => x.SupportId,
+                        principalTable: "Supports",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -332,6 +392,11 @@ namespace MVC.E_Commerce.Migrations
                 name: "IX_ProductTag_TagsId",
                 table: "ProductTag",
                 column: "TagsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StoreSupports_SupportId",
+                table: "StoreSupports",
+                column: "SupportId");
         }
 
         /// <inheritdoc />
@@ -344,7 +409,13 @@ namespace MVC.E_Commerce.Migrations
                 name: "CategoryProduct");
 
             migrationBuilder.DropTable(
+                name: "Checkouts");
+
+            migrationBuilder.DropTable(
                 name: "ProductTag");
+
+            migrationBuilder.DropTable(
+                name: "StoreSupports");
 
             migrationBuilder.DropTable(
                 name: "Carts");
@@ -357,6 +428,9 @@ namespace MVC.E_Commerce.Migrations
 
             migrationBuilder.DropTable(
                 name: "Tags");
+
+            migrationBuilder.DropTable(
+                name: "Supports");
         }
     }
 }

@@ -5,7 +5,6 @@ using MVC.E_Commerce.Models;
 
 using MVC.E_Commerce;
 using System.Net.Sockets;
-using MVC.E_Commerce.Migrations;
 using System.Runtime.CompilerServices;
 using Microsoft.Identity.Client;
 using System.Dynamic;
@@ -107,8 +106,8 @@ namespace MVC.E_Commerce.Controllers
 		{
 			ViewBag.Message = "Welcome to my demo!";
 			dynamic mymodel = new ExpandoObject();
-			mymodel.Supports = new support();
-			mymodel.StoreSupports = new storesupp();
+			//mymodel.Supports = new support();
+			//mymodel.StoreSupports = new storesupp();
 			return View(mymodel);
 		}
 

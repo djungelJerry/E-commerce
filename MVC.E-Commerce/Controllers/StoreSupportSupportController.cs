@@ -1,6 +1,5 @@
 ﻿using System.Dynamic;
 using Microsoft.AspNetCore.Mvc;
-using MVC.E_Commerce.Migrations;
 using MVC.E_Commerce.Models;
 
 namespace MVC.E_Commerce.Controllers
