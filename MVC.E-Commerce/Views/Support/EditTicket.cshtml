@@ -1,5 +1,12 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿﻿@model MVC.E_Commerce.Models.Support
+
+<h1>Edit ticket</h1>
+
+<form asp-action="EditTicket" method="POST">
+	<input type="hidden" name="Id" value="@Html.DisplayFor(model => model.Id) " />
+	Title: <input type="text" name="Title" value="@Html.DisplayFor(model => model.Title)" /><br />
+	Description: <input type="text" name="Description" value="@Html.DisplayFor(model => model.Description)" /><br />
+	Created by: <input type="text" name="Creator" value="@Html.DisplayFor(model => model.Creator)" /><br />
+	<input type="submit" value="Edit Ticket" /><br />
+
+</form>

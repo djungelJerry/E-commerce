@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿﻿@model MVC.E_Commerce.Models.Support
+@using MVC.E_Commerce.Controllers
+
+
+<h1>
+	Ticket @Html.DisplayFor(model => model.Id)
+</h1>
+
+<div>
+	Information about ticket: @Html.DisplayFor(model => model.Id)
+</div>
+
+Id:			  @Html.DisplayFor(model => model.Id)
+<br />
+Title:		  @Html.DisplayFor(model => model.Title)
+<br />
+Description:  @Html.DisplayFor(model => model.Description)
+<br />
+Created by:    @Html.DisplayFor(model => model.Creator)
+<br />
+Reply:		  @Html.DisplayFor(model => model.StoreSupports[0].StoreReply)
+<br />
+<br />
+
+
+<a asp-action="CreateTicket">Create a new ticket</a>
+
+<br />
