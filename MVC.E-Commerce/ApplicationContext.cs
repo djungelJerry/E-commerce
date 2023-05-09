@@ -306,7 +306,7 @@ namespace MVC.E_Commerce
 
             //Checkouts Table
             //modelBuilder.Entity<Checkout>().HasData(
-             //  new { Id = 1, CheckoutTotal = 00.00M });
+            //  new { Id = 1, CheckoutTotal = 00.00M });
         }
     }
 }
