@@ -334,6 +334,62 @@ namespace MVC.E_Commerce.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MVC.E_Commerce.Models.Checkout", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CVC")
+                        .HasMaxLength(3)
+                        .HasColumnType("int");
+
+                    b.Property<string>("CardExpiryDate")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("CardHoldersName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CardNumber")
+                        .HasMaxLength(16)
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Fullname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PhoneNumber")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ZipCode")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Checkouts");
+                });
+
             modelBuilder.Entity("MVC.E_Commerce.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -610,6 +666,59 @@ namespace MVC.E_Commerce.Migrations
                             ProductName = "Chuanganzhuo",
                             ProductPrice = 26.50m
                         });
+                });
+
+            modelBuilder.Entity("MVC.E_Commerce.Models.StoreSupport", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsCustomer")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("StoreReply")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SupportId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SupportId");
+
+                    b.ToTable("StoreSupports");
+                });
+
+            modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Creator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Supports");
                 });
 
             modelBuilder.Entity("MVC.E_Commerce.Models.Tag", b =>
@@ -932,6 +1041,17 @@ namespace MVC.E_Commerce.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("MVC.E_Commerce.Models.StoreSupport", b =>
+                {
+                    b.HasOne("MVC.E_Commerce.Models.Support", "Support")
+                        .WithMany("StoreSupports")
+                        .HasForeignKey("SupportId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Support");
+                });
+
             modelBuilder.Entity("ProductTag", b =>
                 {
                     b.HasOne("MVC.E_Commerce.Models.Product", null)
@@ -950,6 +1070,11 @@ namespace MVC.E_Commerce.Migrations
             modelBuilder.Entity("MVC.E_Commerce.Models.Cart", b =>
                 {
                     b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("MVC.E_Commerce.Models.Support", b =>
+                {
+                    b.Navigation("StoreSupports");
                 });
 #pragma warning restore 612, 618
         }
