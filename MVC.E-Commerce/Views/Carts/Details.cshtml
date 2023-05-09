@@ -2,6 +2,8 @@
 
 <h1>Shopping cart</h1>
 
+<a asp-controller="Checkouts" asp-action="Details" asp-route-id="" class="Order">Checkout</a>
+
 <br />
 <span>Total: $</span>@Html.DisplayFor(model => model.CartTotal)
 <br />
@@ -35,6 +37,8 @@
     <a class="btn btn-sm btn-success mb-1" asp-controller="Carts" asp-action="RemoveOneItem" asp-route-id="@Item.ProductId">-</a>
     <span>Qty: </span>
 
+</div>
+
     @Html.DisplayFor(modelItem => Item.Quantity)
     <a class="btn btn-sm btn-success mb-1" asp-controller="Carts" asp-action="AddOneItem" asp-route-id="@Item.ProductId">+</a>
     <br />
@@ -48,3 +52,4 @@
     </a>
     <hr />
 }
+
