@@ -2,14 +2,12 @@
 
 <h1>Shopping cart</h1>
 
-<a asp-controller="Checkouts" asp-action="Details" asp-route-id="" class="Order">Checkout</a>
-
 <br />
 <span>Total: $</span>@Html.DisplayFor(model => model.CartTotal)
 <br />
 @if (Model.CartItems.Count() != 0)
 {
-    <a asp-controller="Checkouts" asp-action="Index" class="btn btn-sm btn-success">Order checkout</a>
+    <a asp-controller="Checkouts" asp-action="Details" class="btn btn-sm btn-success Order">Order checkout</a>
     <br />
     <a asp-controller="Carts" asp-action="EmptyCart">
         <button type="button" class="btn btn-sm btn-danger mt-1">
@@ -36,8 +34,6 @@
 
     <a class="btn btn-sm btn-success mb-1" asp-controller="Carts" asp-action="RemoveOneItem" asp-route-id="@Item.ProductId">-</a>
     <span>Qty: </span>
-
-</div>
 
     @Html.DisplayFor(modelItem => Item.Quantity)
     <a class="btn btn-sm btn-success mb-1" asp-controller="Carts" asp-action="AddOneItem" asp-route-id="@Item.ProductId">+</a>
