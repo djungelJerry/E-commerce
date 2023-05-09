@@ -1,0 +1,33 @@
+﻿@model MVC.E_Commerce.Models.Checkout 
+
+<h1>Checkout</h1>
+
+<div>Checkout with your shopping cart products.</div>
+<br />
+<h3>Contact Details</h3>
+<form asp-action="Details" method="POST">
+   
+    Full Name: <input type="text" name="Fullname" /><br />
+    Email: <input type="text" name="Email" /><br />
+    Phone Number: <input type="numbers" name="PhoneNumber" /><br />
+</form>
+<br />
+<h3>Shipping Details</h3>
+<form asp-action="Details" method="POST">
+    Country: <input type="text" name="Country" /><br />
+    City: <input type="text" name="City" /><br />
+    Address: <input type="numbers" name="Address" /><br />
+    Zip Code: <input type="numbers" name="ZipCode" /><br />
+</form>
+<br />
+<h3>Payment</h3>
+<b>Pay via Credit Card</b>
+<form asp-action="Details" method="POST">
+    Card Holders Name: <input type="text" name="CardHoldersName" /><br />
+    Card Number: <input type="text" name="CardNumber" /><br />
+    Card Expiry Date: <input type="numbers" name="CardExpiryDate" /><br />
+    CVC: <input type="numbers" name="CVC" /><br />
+    </form>
+    <br /> 
+    <form asp-controller="Checkouts" asp-action="Index" method="POST">
+   <input type="Submit" value="PAY NOW" /></form>
