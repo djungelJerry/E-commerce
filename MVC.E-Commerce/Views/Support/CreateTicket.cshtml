@@ -1,5 +1,9 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿﻿<h1>Skapa en ticket</h1>
+
+<form asp-action="CreateTicket" method="POST">
+	Title: <input type="text" name="Title" /><br />
+	Description: <input type="text" name="Description" /><br />
+	Created by: <input type="text" name="Creator" /><br />
+	<input type="submit" value="Create a ticket" /><br />
+
+</form>

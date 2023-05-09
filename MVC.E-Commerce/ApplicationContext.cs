@@ -14,6 +14,8 @@ namespace MVC.E_Commerce
         public DbSet<Tag> Tags { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
+        public DbSet<Support> Supports { get; set; }
+        public DbSet<StoreSupports> StoreSupport { get; set; }
     
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
