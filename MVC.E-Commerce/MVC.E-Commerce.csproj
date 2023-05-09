@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Tags\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Views\Carts\" />
   </ItemGroup>
 </Project>

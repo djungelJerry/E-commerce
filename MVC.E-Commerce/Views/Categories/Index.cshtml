@@ -1,16 +1,18 @@
-﻿@*@model MVC.E_Commerce.Models.Product*@
-@model List<Category>
+﻿@model List<Category>
+<div class="position-relative">
+    <div class="position-absolute top-0 end-0">
+        @{
+            Html.RenderPartial("/Views/Shared/_Cart.cshtml");
+        }
+    </div>
+</div>
 
 <h1>All categories</h1>
 
 @foreach (Category Item in Model)
 {
-    
-    <span>Category: </span>@Html.DisplayFor(modelItem => Item.CategoryName)
+    @Html.DisplayFor(modelItem => Item.CategoryName)
     <br />
-    
-    <a asp-action="Details" asp-route-id="@Item.Id">Visa detaljer</a>
-    <br />
-    @*<a asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Item.Id">Lägg i varukorgen</a>*@
-    <div>-----------------------------------------------------------------------</div>
+    <a class="btn btn-sm btn-info mt-1" asp-action="Details" asp-route-id="@Item.Id">View products</a>
+    <hr />
 }

@@ -1,0 +1,16 @@
+﻿@model MVC.E_Commerce.Models.Tag
+
+<h1>@Html.DisplayFor(model => model.TagName)</h1>
+
+@foreach (Product Item in Model.Products)
+{
+    @Html.DisplayFor(modelItem => Item.ProductName)
+    <br />
+    <span>$</span>@Html.DisplayFor(modelItem => Item.ProductPrice)
+    <br />
+    <a class="btn btn-sm btn-info mt-1" asp-controller="Products" asp-action="Details" asp-route-id="@Item.Id">Details</a>
+    <br />
+    <a class="btn btn-sm btn-success mt-1" asp-controller="Carts" asp-action="AddToCart" asp-route-id="@Model.Id">Add to cart</a>
+    <br />
+    <hr />
+}
