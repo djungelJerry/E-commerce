@@ -9,53 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MVC.E_Commerce
 build_property.RootNamespace = MVC.E_Commerce
-build_property.ProjectDir = C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce\
+build_property.ProjectDir = C:\Users\thoma\source\repos\MVC.E-Commerce5\MVC.E-Commerce\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\anton\source\repos\MVC.E-Commerce\MVC.E-Commerce
+build_property.MSBuildProjectDirectory = C:\Users\thoma\source\repos\MVC.E-Commerce5\MVC.E-Commerce
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Categories/Details.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Categories/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Categories/Index.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Home/Index.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Home/Privacy.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Products/Details.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Products/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Products/Index.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Products/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Shared/Error.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/_ViewImports.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupportSupport/DisplayAnswers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0U3VwcG9ydFxEaXNwbGF5QW5zd2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/AnswerTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XEFuc3dlclRpY2tldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/DeleteTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XERlbGV0ZVRpY2tldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/displayanswers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XGRpc3BsYXlhbnN3ZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/EditTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XEVkaXRUaWNrZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/StoreSupport/ReplyTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcmVTdXBwb3J0XFJlcGx5VGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/CreateTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxDcmVhdGVUaWNrZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/DeleteTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxEZWxldGVUaWNrZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/DetailsTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxEZXRhaWxzVGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/displayanswers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxkaXNwbGF5YW5zd2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/EditTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxFZGl0VGlja2V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Support/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcG9ydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/_ViewStart.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/anton/source/repos/MVC.E-Commerce/MVC.E-Commerce/Views/Shared/_Layout.cshtml]
+[C:/Users/thoma/source/repos/MVC.E-Commerce5/MVC.E-Commerce/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-eysmozm3gj
